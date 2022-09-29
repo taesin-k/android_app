@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="H A P P E T"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.043" />
+
+    <Button
+        android:id="@+id/go_home"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="17dp"
+        android:layout_marginRight="17dp"
+        android:text="햅펫몰"
+        android:textColor="#000000"
+        app:backgroundTint="#FFFFFF"
+        app:icon="@drawable/ic_baseline_shopping_basket_24"
+        app:iconTint="#000000"
+        app:layout_constraintBottom_toBottomOf="@+id/search_hos"
+        app:layout_constraintEnd_toStartOf="@+id/search_hos"
+        app:layout_constraintTop_toTopOf="@+id/search_hos" />
+
+    <Button
+        android:id="@+id/search_hos"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:text="병원찾기"
+        android:textColor="#000000"
+        app:backgroundTint="#FFFFFF"
+        app:icon="@drawable/ic_baseline_local_hospital_24"
+        app:iconTint="#000000"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.99" />
+
+    <Button
+        android:id="@+id/my_inf"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginLeft="12dp"
+        android:text="내정보"
+        android:textColor="#000000"
+        app:backgroundTint="#FFFFFF"
+        app:icon="@drawable/ic_baseline_person_24"
+        app:iconTint="#000000"
+        app:layout_constraintBottom_toBottomOf="@+id/search_hos"
+        app:layout_constraintStart_toEndOf="@+id/search_hos"
+        app:layout_constraintTop_toTopOf="@+id/search_hos"
+        app:layout_constraintVertical_bias="0.99" />
+
+    <ViewFlipper
+        android:id="@+id/image_slide"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginBottom="340dp"
+        app:layout_constraintBottom_toTopOf="@+id/search_hos"
+        app:layout_constraintTop_toBottomOf="@+id/textView5"
+        app:layout_constraintVertical_bias="0.09"
+        tools:layout_editor_absoluteX="0dp">
+
+    </ViewFlipper>
+
+    <TextView
+        android:id="@+id/textView7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:text="사료"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/image_slide"
+        app:layout_constraintEnd_toEndOf="@+id/textView5"
+        app:layout_constraintHorizontal_bias="0.27"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
+    <TextView
+        android:id="@+id/textView8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:text="간식"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/textView7"
+        app:layout_constraintHorizontal_bias="0.507"
+        app:layout_constraintStart_toStartOf="@+id/image_slide"
+        app:layout_constraintTop_toBottomOf="@+id/image_slide" />
+
+    <TextView
+        android:id="@+id/textView9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:layout_marginEnd="144dp"
+        android:layout_marginRight="144dp"
+        android:text="용품"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/image_slide" />
+
+    <ViewFlipper
+        android:id="@+id/image_slide1"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="39dp"
+        app:layout_constraintBottom_toTopOf="@+id/go_home"
+        app:layout_constraintEnd_toEndOf="@+id/textView8"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/textView8"
+        app:layout_constraintTop_toBottomOf="@+id/textView8">
+
+    </ViewFlipper>
+
+    <ViewFlipper
+        android:id="@+id/image_slide2"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="37dp"
+        app:layout_constraintBottom_toTopOf="@+id/my_inf"
+        app:layout_constraintEnd_toEndOf="@+id/textView9"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/textView9"
+        app:layout_constraintTop_toBottomOf="@+id/textView9" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
